@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>lista de tarea</title>
+</head>
+
+<body>
+    <header>
+        <h1>
+            LISTA DE TAREA
+        </h1>
+    </header>
+
+    <main>
+        <section>
+            <form>
+                <div id="cont-label">
+                    <label for="tareaN">nombre de tarea:</label>
+                    <input type="text" name="tareaN" id="ntarea">
+                </div>
+
+                <div id="cont-label">
+                    <label for="descripcion">descripcion:</label>
+                    <textarea name="descripcion" id="desTarea">
+                    </textarea>
+                </div>
+
+                <input type="submit" id="enviar">
+            </form>
+        </section>
+
+        <section id="content-table">
+            <table border="2" style="border-color:#222;">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Nombre tarea</th>
+                        <th>Descripción</th>
+                        <th>Completado</th> <!-- Nueva columna -->
+                    </tr>
+                </thead>
+
+                <tbody id="content-body">
+                    <tr>
+                        <td>12</td>
+                        <td>Estudiar Matemática</td>
+                        <td>Estudiar matemática prueba parcial el martes 24/4/2025</td>
+                        <td><input type="checkbox" class="taskCheckbox"></td> <!-- Checkbox -->
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Comprar la comida</td>
+                        <td>
+                            1. Arroz <br>
+                            2. Maíz <br>
+                            3. Maicena <br>
+                            4. Albóndiga
+                        </td>
+                        <td><input type="checkbox" class="taskCheckbox"></td> <!-- Checkbox -->
+                    </tr>
+                </tbody>
+
+            </table>
+        </section>
+    </main>
+
+</body>
+
+</html>
