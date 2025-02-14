@@ -101,3 +101,52 @@ textarea {
     border-top-right-radius: 30px;
     box-shadow: 0px 2px 20px #211;
 }
+.delete-btn {
+    background: rgba(252, 0, 0, 0.308);
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.delete-btn:hover {
+    background: darkred;
+}
+
+
+.taskCheckbox {
+    appearance: none; /* Oculta el checkbox nativo */
+    width: 20px;
+    height: 20px;
+    border: 2px solid #007bff; /* Borde azul */
+    border-radius: 5px; /* Esquinas redondeadas */
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Efecto de hover */
+.taskCheckbox:hover {
+    border-color: #0056b3;
+}
+
+/* Cuando el checkbox está marcado */
+.taskCheckbox:checked {
+    background-color: #007bff; /* Fondo azul */
+    border-color: #007bff;
+}
+
+/* Agregar un "✔" dentro del checkbox cuando está marcado */
+.taskCheckbox:checked::after {
+    content: "✔";
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+

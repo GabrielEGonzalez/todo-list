@@ -12,6 +12,7 @@ boton.addEventListener('click', (even) => {
     let tdNombre = document.createElement('td');
     let tdDescripcion = document.createElement('td');
     let tdChex = document.createElement('td')
+    let tdEliminar = document.createElement('td');
 
     tdIndex.innerText = tbody.children.length + 1;
     tdNombre.innerText = nombre.value;
@@ -25,10 +26,16 @@ boton.addEventListener('click', (even) => {
 
     tdChex.appendChild(input);
 
+    const deleteBtn = document.createElement("button");
+    deleteBtn.textContent = "❌";
+    deleteBtn.classList.add("delete-btn");
+    tdEliminar.appendChild(deleteBtn);
+
     tr.appendChild(tdIndex);
     tr.appendChild(tdNombre);
     tr.appendChild(tdDescripcion);
     tr.appendChild(tdChex);
+    tr.appendChild(tdEliminar);
     tbody.appendChild(tr);
 
     nombre.value = "";
@@ -42,9 +49,21 @@ boton.addEventListener('click', (even) => {
             row.style.textDecoration = "none"; 
         }
     });
+
+    // Eliminar tarea
+    deleteBtn.addEventListener("click", function () {
+        tr.remove(); // Eliminar del DOM
+        actualizarIndices(); // Reorganizar números
+    });
 });
 
 
 
 
 
+function actualizarIndices() {
+    let filas = tbody.querySelectorAll("tr");
+    filas.forEach((fila, index) => {
+        fila.children[0].innerText = index + 1;
+    });
+}
