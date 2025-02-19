@@ -24,8 +24,8 @@ Una aplicación web interactiva para gestionar tus tareas de manera sencilla. Pe
    ```
 3. Abre `index.html` en tu navegador.
 
-## 📸 Capturas de pantalla (Opcional)
-_Agrega aquí imágenes de la interfaz de la aplicación._
+## 📸 Capturas de pantalla 
+D:\todo-list\todo-list\Captura de pantalla 2025-02-19 003700.png
 
 ## 📌 Mejoras futuras
 - Agregar categorías para las tareas.
